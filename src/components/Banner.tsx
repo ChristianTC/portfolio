@@ -3,13 +3,16 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import { useState, useEffect } from 'react';
 import TrackVisibility from 'react-on-screen';
+import navIcon1 from '../assets/img/nav-icon1.svg'
+import navIcon2 from '../assets/img/nav-icon2.svg'
+import navIcon3 from '../assets/img/nav-icon3.svg'
 import 'animate.css';
 
 const Banner = () => {
 
   const [loopNum, setLoopNum] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const toRotate = ["Web Developer", "Frontend Developer", "Software Engineer"]
+  const toRotate = ["Frontend Developer", "Web Developer", "Software Engineer"]
   const [text, setText] = useState('')
   const [delta, setDelta] = useState(300 - Math.random() * 100)
   const period = 2000
@@ -34,7 +37,8 @@ const Banner = () => {
     }
 
     if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true)
+      // setIsDeleting(true)
+      setIsDeleting(false)
       setDelta(period)
     }else if(isDeleting && updatedText === ''){
       setIsDeleting(false)
@@ -52,15 +56,24 @@ const Banner = () => {
             {({ isVisible }) => 
               <div className={isVisible ? "animated__animated animate__fadeIn" : ""}>
                 <span className='tagline'>Welcome to my Portfolio</span>
-                <h1>{`Hi I'm Christian Tambo\n`}<span className='wrap'>{text}</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati unde quasi perspiciatis tenetur nesciunt reiciendis, id incidunt earum sapiente omnis voluptate repellat suscipit quos quam totam sint culpa assumenda cupiditate!</p>
-                <button onClick={() => console.log('Connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                <h2>{`Hi I'm Christian Tambo\n`}</h2>
+                <h1 className='wrap'>{text}</h1>
+                <div style={{display: 'flex', alignItems: 'end'}}>
+                  <button onClick={() => console.log('Connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                  <span className='navbar-text'>
+                    <div className='social-icon'>
+                      <a href="#"><img src={navIcon1} alt="" /></a>
+                      <a href="#"><img src={navIcon2} alt="" /></a>
+                      <a href="#"><img src={navIcon3} alt="" /></a>
+                    </div>
+                  </span>
+                </div>
               </div>
             }
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img src={headerImg} alt="Header Img" />
+            <img className='astronaut' src={headerImg} alt="Header Img" />
           </Col>
         </Row>
       </Container>
