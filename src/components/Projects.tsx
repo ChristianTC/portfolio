@@ -85,7 +85,6 @@ return (
         </Col>
       </Row>
     </Container>
-    <img src={colorSharp2} alt="" className="background-image-right" />
   </section>
 )
 }
