@@ -1,42 +1,108 @@
 
 
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import { projectAdminPro, projectAltruism, projectGoogleClone, projectJemcare, projectLendgistics, projectLetsConnect, projectPlatziConf, projectPortfolio, projectSellyourcar, projectSuperContrato, projectThesource, projectVitalCard } from "../assets/img/projects";
 import ProjectCard from './ProjectCard';
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
+      title: "Altruism",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: projectAltruism,
+      status: true,
+      url: "https://admin.altruismhealthgroup.com/",
+      technologies: [
+        "React", "Typescript", "NodeJs", "Sass", "Figma"
+      ]
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Vital Card Admin",
+      description: "Development",
+      imgUrl: projectVitalCard,
+      status: true,
+      url: "https://www.vitalcard.com/",
+      technologies: ["React", "Typescript", "NodeJs", "HTML", "Sass"]
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Super Contrato",
+      description: "Development",
+      imgUrl: projectSuperContrato,
+      status: true,
+      url: "https://www.supercontrato.com/",
+      technologies: ["Wordpress", "PHP", "JQuery", "Javascript", "Elementor"]
     },
     {
-      title: "Business Startup",
+      title: "Let's Connect",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: projectLetsConnect,
+      status: true,
+      url: "http://apps.letsconnect123.com/",
+      technologies: ["React", "Typescript", "NodeJs", "HTML", "Sass", "Figma"]
     },
     {
-      title: "Business Startup",
+      title: "Portfolio",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: projectPortfolio,
+      status: true,
+      url: "https://christiantambo.netlify.app/",
+      technologies: ["React", "Typescript", "NodeJs", "HTML", "CSS", "Vite", "Bootstrap"]
     },
     {
-      title: "Business Startup",
+      title: "Admin Pro",
+      description: "Development",
+      imgUrl: projectAdminPro,
+      status: true,
+      url: "https://chrisdev-adminpro.netlify.app/",
+      technologies: ["Angular", "NodeJs", "HTML", "CSS", "Typescript"]
+    },
+    {
+      title: "Jemcare Admin",
+      description: "Development",
+      imgUrl: projectJemcare,
+      status: true,
+      url: "https://www.jemcare.org/",
+      technologies: ["React", "Typescript", "NodeJs", "HTML", "Sass", "Figma"]
+    },
+    {
+      title: "Lendgistics",
+      description: "Development",
+      imgUrl: projectLendgistics,
+      status: false,
+      url: "#",
+      technologies: ["React", "Typescript", "NodeJs", "HTML", "Sass"]
+    },
+    {
+      title: "Sell Your Car",
       description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: projectSellyourcar,
+      status: false,
+      url: "#",
+      technologies: ["React", "Typescript", "NodeJs", "HTML", "Sass", "Figma"]
+    },
+    {
+      title: "The Source Admin",
+      description: "Design & Development",
+      imgUrl: projectThesource,
+      status: false,
+      url: "#",
+      technologies: ["React", "Typescript", "NodeJs", "HTML", "Sass", "Figma"]
+    },
+    {
+      title: "Google Clone",
+      description: "Development",
+      imgUrl: projectGoogleClone,
+      status: true,
+      url: "https://google-clone-tc.netlify.app/",
+      technologies: ["HTML", "CSS"]
+    },
+    {
+      title: "Platzi Conf",
+      description: "Development",
+      imgUrl: projectPlatziConf,
+      status: true,
+      url: "https://badgesct.netlify.app/",
+      technologies: ["Javascript", "HTML", "CSS"]
     },
   ]
 return (
@@ -49,13 +115,13 @@ return (
           <Tab.Container id="projects-tabs" defaultActiveKey="first">
             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
               <Nav.Item>
-                <Nav.Link eventKey="first">Tab One</Nav.Link>
+                <Nav.Link eventKey="first">All</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                <Nav.Link eventKey="second">React</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="third">Tab Three</Nav.Link>
+                <Nav.Link eventKey="third">Angular</Nav.Link>
               </Nav.Item>
             </Nav>
             <Tab.Content>
@@ -74,10 +140,36 @@ return (
                 </Row>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa magnam voluptate, similique autem fugit repudiandae culpa libero illo. Enim velit, aperiam aliquid maxime aspernatur fuga repellendus. Eos perferendis ex dolores.</p>
+                <Row>
+                  {
+                    projects.map((project, index) => {
+                      if (project.technologies.includes('React')) {
+                        return (
+                          <ProjectCard 
+                          key={index} 
+                          {...project}
+                          />
+                          )
+                        }
+                    })
+                  }
+                </Row>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
-                <p>Lorem</p>
+                <Row>
+                  {
+                    projects.map((project, index) => {
+                      if (project.technologies.includes('Angular')) {
+                        return (
+                          <ProjectCard 
+                          key={index} 
+                          {...project}
+                          />
+                          )
+                        }
+                    })
+                  }
+                </Row>
               </Tab.Pane>
             </Tab.Content>
           </Tab.Container>

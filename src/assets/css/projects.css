@@ -18,7 +18,7 @@
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 90%;
 }
 .project .nav.nav-pills {
   width: 72%;
@@ -77,7 +77,7 @@
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 0.5em;
 }
 .proj-imgbx::before {
   content: "";
@@ -105,18 +105,7 @@
   top: 50%;
   opacity: 1;
 }
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
+
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -124,4 +113,36 @@
   width: 35%;
   right: 0;
   z-index: -4;
+}
+.proj-txtx a {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+  color: #fff;
+  border: solid #fff 1px;
+  border-radius: 10px;
+  background-color: #AA367C;
+}
+.proj-txtx a:hover {
+  color: #AA367C;
+  font-weight: 500;
+  background-color: #fff;
+  border: solid #AA367C 1px;
+}
+.proj-desc {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.proj-desc h4{
+  text-align: center;
+  margin-bottom: 0px;
+}
+.proj-desc p{
+  text-align: start;
+  margin: 0.5em 0.5em;
+  margin-right: 0px !important;
+  font-size: 15px;
 }
