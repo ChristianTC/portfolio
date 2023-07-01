@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
 import "react-multi-carousel/lib/styles.css";
-import { logoAngular, logoCplusplus, logoCsharp, logoCss, logoHtml, logoJava, logoJavascript, logoLaravel, logoNet, logoNodejs, logoPhp, logoPython, logoReact, logoTypescript, logoVite } from '../assets/img/technologies';
+import { logoAngular, logoCplusplus, logoCsharp, logoCss, logoFigma, logoFlutter, logoHtml, logoJava, logoJavascript, logoLaravel, logoMysql, logoNet, logoNodejs, logoPhp, logoPython, logoReact, logoSqlserver, logoTypescript, logoVite } from '../assets/img/technologies';
 import SkillCard from './SkillCard';
 
 const Skills = () => {
@@ -35,6 +35,10 @@ const Skills = () => {
       logoUrl: logoNodejs
     },
     {
+      name: "Flutter",
+      logoUrl: logoFlutter
+    },
+    {
       name: "Java",
       logoUrl: logoJava
     },
@@ -66,7 +70,18 @@ const Skills = () => {
       name: "Vite",
       logoUrl: logoVite
     },
-    
+    {
+      name: "Sql Server",
+      logoUrl: logoSqlserver
+    },
+    {
+      name: "MySql",
+      logoUrl: logoMysql
+    },
+    {
+      name: "Figma",
+      logoUrl: logoFigma
+    },
   ];
 
   return (

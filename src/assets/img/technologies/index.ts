@@ -13,6 +13,10 @@ import logoCsharp from './csharp.png'
 import logoCplusplus from './c++.png'
 import logoNet from './net.png'
 import logoVite from './vite.png'
+import logoSqlserver from './sql-server.png'
+import logoMysql from './mysql.png'
+import logoFigma from './figma.png'
+import logoFlutter from './flutter.png'
 
 export {
   logoReact,
@@ -29,5 +33,9 @@ export {
   logoCsharp,
   logoCplusplus,
   logoNet,
-  logoVite
+  logoVite,
+  logoSqlserver,
+  logoMysql,
+  logoFigma,
+  logoFlutter,
 }
