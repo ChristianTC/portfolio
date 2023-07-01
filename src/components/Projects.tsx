@@ -111,7 +111,7 @@ return (
       <Row>
         <Col>
           <h2>Projects</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quas perspiciatis quidem eveniet reprehenderit hic ut delectus eius voluptatum, qui veritatis ipsa blanditiis natus? Recusandae illo laborum aut quae temporibus?</p>
+          <p>These are the projects I have worked on:</p>
           <Tab.Container id="projects-tabs" defaultActiveKey="first">
             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
               <Nav.Item>
