@@ -58,7 +58,9 @@ const Banner = () => {
                 <h2>{`Hi I'm Christian Tambo\n`}</h2>
                 <h1 className='wrap'>{text}</h1>
                 <div style={{display: 'flex', alignItems: 'end'}}>
-                  <button onClick={() => console.log('Connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                  <a href="#contact">
+                    <button onClick={() => console.log('Connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                  </a>
                   <span className='navbar-text'>
                     <div className='social-icon'>
                       <a href="https://www.linkedin.com/in/christiantambo/" target='_blank'><img src={navIcon1} alt="" /></a>
