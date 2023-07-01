@@ -1,0 +1,82 @@
+import { Container, Row, Col } from 'react-bootstrap';
+import { ArrowRightCircle } from "react-bootstrap-icons";
+import headerImg from "../assets/img/header-img.svg";
+import { useState, useEffect } from 'react';
+import TrackVisibility from 'react-on-screen';
+import navIcon1 from '../assets/img/nav-icon1.svg'
+import iconGithub from '../assets/img/github.svg'
+import 'animate.css';
+
+const Banner = () => {
+
+  const [loopNum, setLoopNum] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const toRotate = ["Frontend Developer", "Web Developer", "Software Engineer"]
+  const [text, setText] = useState('')
+  const [delta, setDelta] = useState(300 - Math.random() * 100)
+  const period = 2000
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick()
+    }, delta)
+
+    return () => { clearInterval(ticker) }
+  }, [text])
+
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i]
+    let updatedText = isDeleting ? fullText.substring(0, text.length-1) : fullText.substring(0, text.length + 1)
+
+    setText(updatedText)
+
+    if (isDeleting) {
+      setDelta(prevDelta => prevDelta / 2)
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      // setIsDeleting(true)
+      setIsDeleting(false)
+      setDelta(period)
+    }else if(isDeleting && updatedText === ''){
+      setIsDeleting(false)
+      setLoopNum(loopNum + 1)
+      setDelta(500)
+    }
+  }
+
+  return (
+    <section className="banner" id="home">
+      <Container>
+        <Row className="align-items-center">
+          <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+            {({ isVisible }) => 
+              <div className={isVisible ? "animated__animated animate__fadeIn" : ""}>
+                <span className='tagline'>Welcome to my Portfolio</span>
+                <h2>{`Hi I'm Christian Tambo\n`}</h2>
+                <h1 className='wrap'>{text}</h1>
+                <div style={{display: 'flex', alignItems: 'end'}}>
+                  <button onClick={() => console.log('Connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                  <span className='navbar-text'>
+                    <div className='social-icon'>
+                      <a href="https://www.linkedin.com/in/christiantambo/" target='_blank'><img src={navIcon1} alt="" /></a>
+                      <a href="https://github.com/ChristianTC" target='_blank'><img src={iconGithub} alt="" /></a>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            }
+            </TrackVisibility>
+          </Col>
+          <Col xs={12} md={6} xl={5}>
+            <img className='astronaut' src={headerImg} alt="Header Img" />
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  )
+}
+
+export default Banner
