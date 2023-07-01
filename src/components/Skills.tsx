@@ -1,30 +1,73 @@
-import Carousel from "react-multi-carousel";
 import { Container, Row, Col } from 'react-bootstrap';
-import meter1 from '../assets/img/meter1.svg'
-import meter2 from '../assets/img/meter2.svg'
-import meter3 from '../assets/img/meter3.svg'
+
 import "react-multi-carousel/lib/styles.css";
+import { logoAngular, logoCplusplus, logoCsharp, logoCss, logoHtml, logoJava, logoJavascript, logoLaravel, logoNet, logoNodejs, logoPhp, logoPython, logoReact, logoTypescript, logoVite } from '../assets/img/technologies';
+import SkillCard from './SkillCard';
 
 const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
+  const technologies = [
+    {
+      name: "React",
+      logoUrl: logoReact
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
+    {
+      name: "Angular",
+      logoUrl: logoAngular
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
+    {
+      name: "Javascript",
+      logoUrl: logoJavascript
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+    {
+      name: "Typescript",
+      logoUrl: logoTypescript
+    },
+    {
+      name: "HTML",
+      logoUrl: logoHtml
+    },
+    {
+      name: "CSS",
+      logoUrl: logoCss
+    },
+    {
+      name: "NodeJs",
+      logoUrl: logoNodejs
+    },
+    {
+      name: "Java",
+      logoUrl: logoJava
+    },
+    {
+      name: "Python",
+      logoUrl: logoPython
+    },
+    {
+      name: "C++",
+      logoUrl: logoCplusplus
+    },
+    {
+      name: ".NET",
+      logoUrl: logoNet
+    },
+    {
+      name: "C#",
+      logoUrl: logoCsharp
+    },
+    {
+      name: "Laravel",
+      logoUrl: logoLaravel
+    },
+    {
+      name: "PHP",
+      logoUrl: logoPhp
+    },
+    {
+      name: "Vite",
+      logoUrl: logoVite
+    },
+    
+  ];
 
   return (
     <section className="skill" id="skills">
@@ -33,25 +76,16 @@ const Skills = () => {
           <Col>
             <div className="skill-bx">
               <h2>Skills</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, enim ducimus. Maiores tempora quos et optio praesentium molestias illo odit similique veniam. Reiciendis soluta minus a voluptatem exercitationem omnis officiis!</p>
-              <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                <div className="item">
-                  <img src={meter1} alt="Image" />
-                  <h5>Web Development</h5>
-                </div>
-                <div className="item">
-                  <img src={meter2} alt="Image" />
-                  <h5>Brand Identity</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} alt="Image" />
-                  <h5>Logo Design</h5>
-                </div>
-                <div className="item">
-                  <img src={meter1} alt="Image" />
-                  <h5>Web Development</h5>
-                </div>
-              </Carousel>
+              <p>These are the technologies I used in my projects:</p>
+              <div className='technologies'>
+                {
+                  technologies.map((technology, index)=>{
+                    return (
+                      <SkillCard key={index} {...technology} />
+                    )
+                  })
+                }
+              </div>
             </div>
           </Col>
         </Row>

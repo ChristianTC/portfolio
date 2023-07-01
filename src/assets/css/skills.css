@@ -21,7 +21,7 @@
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
-    margin: 14px 0 75px 0;
+    margin: 14px 0 40px 0;
 }
 .skill-slider {
   width: 80%;
@@ -38,4 +38,29 @@
   bottom: 0;
   width: 40%;
   z-index: -4;
+}
+.skill .technologies {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(
+      auto-fit,
+      minmax(100px, 1fr)
+    );
+    gap: 10px;
+}
+.skillcard {
+  width: auto;
+  filter: grayscale(100%);
+}
+.skillcard img {
+  width: auto;
+  height: 80px;
+}
+.skillcard:hover, .skillcard:hover p{
+  filter: grayscale(0%);
+  color: #fff;
+  font-weight: 900;
+}
+.skillcard p {
+  margin-bottom: 10px;
 }
