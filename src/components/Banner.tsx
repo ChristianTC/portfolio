@@ -11,7 +11,7 @@ const Banner = () => {
 
   const [loopNum, setLoopNum] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const toRotate = ["Frontend Developer", "Web Developer", "Software Engineer"]
+  const toRotate = ["FullStack Developer", "Software Engineer"]
   const [text, setText] = useState('')
   const [delta, setDelta] = useState(300 - Math.random() * 100)
   const period = 2000
@@ -36,8 +36,8 @@ const Banner = () => {
     }
 
     if (!isDeleting && updatedText === fullText) {
-      // setIsDeleting(true)
-      setIsDeleting(false)
+      setIsDeleting(true)
+      // setIsDeleting(false)
       setDelta(period)
     }else if(isDeleting && updatedText === ''){
       setIsDeleting(false)
