@@ -10,6 +10,7 @@ import projectJemcare from './jemcare.png'
 import projectLendgistics from './lendgistics.png'
 import projectSellyourcar from './sellyourcar.png'
 import projectThesource from './thesource.png'
+import projectGifsApp from './gifsApp.png'
 
 export {
   projectAltruism,
@@ -24,4 +25,5 @@ export {
   projectLendgistics,
   projectSellyourcar,
   projectThesource,
+  projectGifsApp,
 }

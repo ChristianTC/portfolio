@@ -1,6 +1,6 @@
 
 
-import { projectAdminPro, projectAltruism, projectGoogleClone, projectJemcare, projectLendgistics, projectLetsConnect, projectPlatziConf, projectPortfolio, projectSellyourcar, projectSuperContrato, projectThesource, projectVitalCard } from "../assets/img/projects";
+import { projectAdminPro, projectAltruism, projectGoogleClone, projectJemcare, projectLendgistics, projectLetsConnect, projectPlatziConf, projectPortfolio, projectSellyourcar, projectSuperContrato, projectThesource, projectVitalCard, projectGifsApp } from "../assets/img/projects";
 import ProjectCard from './ProjectCard';
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 
@@ -54,6 +54,14 @@ const Projects = () => {
       imgUrl: projectAdminPro,
       status: true,
       url: "https://chrisdev-adminpro.netlify.app/",
+      technologies: ["Angular", "NodeJs", "HTML", "CSS", "Typescript"]
+    },
+    {
+      title: "Gifs App",
+      description: "Development",
+      imgUrl: projectGifsApp,
+      status: true,
+      url: "https://christiantc.github.io/ng-gifs-app/",
       technologies: ["Angular", "NodeJs", "HTML", "CSS", "Typescript"]
     },
     {
