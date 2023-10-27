@@ -1,6 +1,6 @@
 
 
-import { projectAdminPro, projectAltruism, projectGoogleClone, projectJemcare, projectLendgistics, projectLetsConnect, projectPlatziConf, projectPortfolio, projectSellyourcar, projectSuperContrato, projectThesource, projectVitalCard, projectGifsApp } from "../assets/img/projects";
+import { projectAdminPro, projectAltruism, projectGoogleClone, projectJemcare, projectLendgistics, projectLetsConnect, projectPlatziConf, projectPortfolio, projectSellyourcar, projectSuperContrato, projectThesource, projectVitalCard, projectGifsApp, projectCountryApp } from "../assets/img/projects";
 import ProjectCard from './ProjectCard';
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 
@@ -87,6 +87,14 @@ const Projects = () => {
       status: false,
       url: "#",
       technologies: ["React", "Typescript", "NodeJs", "HTML", "Sass", "Figma"]
+    },
+    {
+      title: "Country App",
+      description: "Development",
+      imgUrl: projectCountryApp,
+      status: true,
+      url: "https://christiantc.github.io/ng-country-app/",
+      technologies: ["Angular", "NodeJs", "HTML", "CSS", "Typescript"]
     },
     {
       title: "The Source Admin",
