@@ -12,6 +12,7 @@ import projectSellyourcar from './sellyourcar.png'
 import projectThesource from './thesource.png'
 import projectGifsApp from './gifsApp.png'
 import projectCountryApp from './countryApp.png'
+import projectPipesApp from './pipesApp.png'
 
 export {
   projectAltruism,
@@ -28,4 +29,5 @@ export {
   projectThesource,
   projectGifsApp,
   projectCountryApp,
+  projectPipesApp,
 }

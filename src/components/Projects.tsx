@@ -1,11 +1,19 @@
 
 
-import { projectAdminPro, projectAltruism, projectGoogleClone, projectJemcare, projectLendgistics, projectLetsConnect, projectPlatziConf, projectPortfolio, projectSellyourcar, projectSuperContrato, projectThesource, projectVitalCard, projectGifsApp, projectCountryApp } from "../assets/img/projects";
+import { projectAdminPro, projectAltruism, projectGoogleClone, projectJemcare, projectLendgistics, projectLetsConnect, projectPlatziConf, projectPortfolio, projectSellyourcar, projectSuperContrato, projectThesource, projectVitalCard, projectGifsApp, projectCountryApp, projectPipesApp } from "../assets/img/projects";
 import ProjectCard from './ProjectCard';
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Pipes App",
+      description: "Development",
+      imgUrl: projectPipesApp,
+      status: true,
+      url: "https://christiantc.github.io/ng-pipes-app/",
+      technologies: ["Angular", "HTML", "CSS", "Typescript"]
+    },
     {
       title: "Altruism",
       description: "Design & Development",
